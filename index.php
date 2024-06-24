@@ -1,7 +1,12 @@
 <?php
-//them
-setcookie("huu", "Dung", time() + 10000, "/");
+//tao session
+session_start();
 
-// //xoa
-// setcookie("huu", "Dung", time() - 10000, "/");
+$_SESSION["DUng"] = "hihih";
+
+//xoa 1 session
+unset($_SESSION["DUng"]);
+
+//xoa all session
+session_destroy();
 ?>
