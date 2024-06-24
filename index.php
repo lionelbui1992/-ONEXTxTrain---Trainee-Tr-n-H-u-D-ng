@@ -1,24 +1,13 @@
 <?php
-//ham khong tham so
-function inTen($ten){
-    echo "ten cua ban la $ten";
-}
+//array chua so nguyen
+$a = array(3,5,3,2,2,3,45,5);
+//array chua chuoi
+$b = array("tran", "huu", "dung");
+//array chua cac kieu du lieu khac nhau
+$c= array("tran huu dunug", 20, true);
 
-//ham co tham so
-function tinhTuoi($namSinh){
-    return 2024 - $namSinh;
-}
+//cac ham voi array
 
-//ham luan ly
-function diLinhNhe($tuoi){
-    if($tuoi < 18){
-        false;
-    }else{
-        true;
-    }
-}
+$soPhanTu = count($c);
 
-inTen("dung");
-
-echo "<br>tuoi cua ban la " .tinhtuoi(2004);
 ?>
