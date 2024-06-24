@@ -1,19 +1,20 @@
 <?php
-$a = 2;
-
-switch ($a) {
-    case 0:
-        echo "case is 0";
-        break;
-    case 1:
-        echo "case is 1";
-        break;
-    case 2:
-        echo "case is 2";
-        break;
-    default:
-    echo "case is 2";
-        break;
+//for loop
+for($i = 0; $i < 10; $i++) {
+    echo $i . "<br>";
 }
 
+//while loop
+$i =0;
+while($i < 10) {
+    echo $i . "<br>";
+    $i++;
+}
+
+//do while loop
+$x = 7;
+do{
+    echo $x . " van chay 1 lan <br>";
+    $x++;
+}while($x > 10)
 ?>
