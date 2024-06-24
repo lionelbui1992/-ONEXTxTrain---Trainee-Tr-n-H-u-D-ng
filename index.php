@@ -1,27 +1,12 @@
 <?php
+$str = "huudung huudung huudung huudung";
+$pattern = "/huudung/i";
+//kiem tra xem co ton tai trong chuoi khong
+echo preg_match($pattern, $str); 
 
-    //tuong tu voi get
-    // if($_SERVER['REQUEST_METHOD'] == "GET"){
-    //     echo $_GET['yourName'];
-    // }
+//kem tra xem ton taij bao nhieu lan
+echo preg_match_all($pattern, $str);
 
-    if($_SERVER['REQUEST_METHOD'] == "POST"){
-        echo $_POST['yourName'];
-    }  
-    
-    
-    //request lay ca 2
-    echo $_REQUEST['yourName'];
-
-    $a= 54;
-
-    function testGlobal(){
-        echo $GLOBALS['a']; //phai dung global moi lay duoc a
-    }
-
+//thay the chuoi khop bang mot chuoi khac
+echo preg_replace($pattern, "hihi", $str);
 ?>
-
-<form action="index.php" method="post">
-    input your name <input type="text" name="yourName" id=""> <br>
-    <button>Send</button>
-</form>
