@@ -1,8 +1,8 @@
 <?php 
 if($_SERVER['REQUEST_METHOD'] == "POST"){
     $messageError = "";
-if($_POST["yourName"] == ""){
-    $messageError = "must be not null";
+if( empty($_POST["yourName"])){
+    $messageError = "name is required";
 }else{
     echo $_POST['yourName'];
     echo "<br>";
