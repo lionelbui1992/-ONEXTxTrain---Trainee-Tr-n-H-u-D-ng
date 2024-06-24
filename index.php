@@ -1,18 +1,46 @@
 <?php
-// __CLASS__ tra ve ten class
+$x = 2;
+$y = 4;
 
-// __DIR__ tra ve ten duong date_interval_create_from_date_string
+//toan tu cong
+echo $x + $y;
+//toan tu tru
+echo $x - $y;
+//toan tu nhan
+echo $x * $y;
+//toan tu chia
+echo $x / $y;
+//chia lay du
+echo $x % $y;
+//luy thua( x mu y)
+echo $x ** $y;
 
-// __FILE__ tra ve ten file
+//toan tu so sanh
 
-// __FUNCTION__ tra ve ten ham
+//so sanh bang
+$x == $y;
 
-// __METHOD__ tra ve ten phuong thuc
+//so sanh khac
+$x!= $y;
 
-// __NAMESPACE__ tra ve ten namespace
+//so sanh lon hon
+$x > $y;
 
-// __TRAIT__ tra ve ten trait
 
-// __LINE__ tra ve dong hien tai
+//so sanh nho hon
+$x < $y;
 
+//so sanh lon hon hoac bang
+$x >= $y;
+
+//so sanh nho hon hoac bang
+$x <= $y;
+
+//toan tu gan
+$x = $y;
+$x += $y;
+$x -= $y;
+$x *= $y;
+$x /= $y;
+$x %= $y;
 ?>
