@@ -1,18 +1,20 @@
 <?php
-$a = 12;
-$b = 4.5;
-$c= true;
-$d = "tran huu dung";
+echo pi() . "<br />";
+echo min(3,2,3,5,3,53,7,65,3,1,2).'<br />';
+echo max(3,2,3,5,3,53,7,65,3,1,2).'<br />';
 
-$a = (string)$a;
-$b = (int)$b;
-$c = (string)$c;
-$d = (int)$d;
+//tra ve tri tuyet doi
 
-echo $a;
-echo $b;
-echo $c;
-echo $d;
+echo abs(-32) ."<br />";
+echo abs(39) ."<br />";
 
+//ham random
+echo rand() ."<br>";
+
+//tra ve can bac 2
+
+echo sqrt(100) ."<br />";
+//lam tron sau dau phay
+echo round(1.93432) ."<br />";
 
 ?>
