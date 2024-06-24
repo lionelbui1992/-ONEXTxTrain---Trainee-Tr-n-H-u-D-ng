@@ -1,3 +1,1 @@
-<?php
-echo "day la file test";
-?>
+day la file ban da doc
