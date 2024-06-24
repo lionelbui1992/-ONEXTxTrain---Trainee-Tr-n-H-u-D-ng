@@ -20,6 +20,9 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
     echo $_POST['country'];
     echo "<br>";
     echo $_POST['email'];
+    echo "<br>";
+    echo $_POST['myUrl'];
+    echo "<br>";
 }
 ?>
 
