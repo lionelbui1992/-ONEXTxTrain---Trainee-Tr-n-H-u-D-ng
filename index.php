@@ -1,9 +1,7 @@
 <?php
-    // echo "hello world";
+$soNguyen = 134;
+$soThuc = 32.43;
+$chuoi = "tran huu dung";
+$luanLy = true;
 
-
-    // day la comment 
-
-
-    /** day cung la comment  */
 ?>
