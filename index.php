@@ -1,11 +1,14 @@
 <?php
-$soNguyen = 134;
-echo var_dump($soNguyen);
-$soThuc = 32.43;
-echo var_dump($soThuc);
 $chuoi = "tran huu dung";
-echo var_dump($chuoi);
-$luanLy = true;
-echo var_dump($luanLy);
+
+//kiem tra do dai
+echo strlen($chuoi) ." day la do dai <br>";
+
+//dem so tu
+echo str_word_count($chuoi)." day la so tu <br>";
+
+//tim van ban trong mot chuoi
+
+echo strpos($chuoi, "dung"). "xuat hien o vi tri nay";
 
 ?>
