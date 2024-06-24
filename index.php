@@ -1,13 +1,27 @@
 <?php
-//array chua so nguyen
-$a = array(3,5,3,2,2,3,45,5);
-//array chua chuoi
-$b = array("tran", "huu", "dung");
-//array chua cac kieu du lieu khac nhau
-$c= array("tran huu dunug", 20, true);
 
-//cac ham voi array
+    //tuong tu voi get
+    // if($_SERVER['REQUEST_METHOD'] == "GET"){
+    //     echo $_GET['yourName'];
+    // }
 
-$soPhanTu = count($c);
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        echo $_POST['yourName'];
+    }  
+    
+    
+    //request lay ca 2
+    echo $_REQUEST['yourName'];
+
+    $a= 54;
+
+    function testGlobal(){
+        echo $GLOBALS['a']; //phai dung global moi lay duoc a
+    }
 
 ?>
+
+<form action="index.php" method="post">
+    input your name <input type="text" name="yourName" id=""> <br>
+    <button>Send</button>
+</form>
