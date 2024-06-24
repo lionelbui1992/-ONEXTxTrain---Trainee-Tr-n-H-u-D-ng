@@ -1,12 +1,19 @@
 <?php
-$a = 9;
+$a = 2;
 
-if($a > 0){
-    echo "a lon hon 0";
-}elseif($a = 0 ){
-    echo "a lon bang 0";
-}else{
-    echo "a nho hon 0";
+switch ($a) {
+    case 0:
+        echo "case is 0";
+        break;
+    case 1:
+        echo "case is 1";
+        break;
+    case 2:
+        echo "case is 2";
+        break;
+    default:
+    echo "case is 2";
+        break;
 }
 
 ?>
