@@ -1,20 +1,24 @@
 <?php
-//for loop
-for($i = 0; $i < 10; $i++) {
-    echo $i . "<br>";
+//ham khong tham so
+function inTen($ten){
+    echo "ten cua ban la $ten";
 }
 
-//while loop
-$i =0;
-while($i < 10) {
-    echo $i . "<br>";
-    $i++;
+//ham co tham so
+function tinhTuoi($namSinh){
+    return 2024 - $namSinh;
 }
 
-//do while loop
-$x = 7;
-do{
-    echo $x . " van chay 1 lan <br>";
-    $x++;
-}while($x > 10)
+//ham luan ly
+function diLinhNhe($tuoi){
+    if($tuoi < 18){
+        false;
+    }else{
+        true;
+    }
+}
+
+inTen("dung");
+
+echo "<br>tuoi cua ban la " .tinhtuoi(2004);
 ?>
