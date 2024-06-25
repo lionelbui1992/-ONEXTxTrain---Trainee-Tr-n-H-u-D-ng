@@ -14,19 +14,27 @@ if ($conn->connect_error) {
 
 // SQL query to create a new database named 'huudung'
 
-$stmt = $conn->prepare("INSERT INTO `account` (`id`, `username`, `password`, `email`, `firstname`, `lastname`) VALUES (NULL, ?, ?, ?, ?, ?);");
+$stmt = $conn->prepare("SELECT * FROM account");
 
-$stmt->bind_param("sssss", $username, $password, $email, $firstname, $lastname);
-
-$username = "huudung";
-$password = "123@gmail.com";
-$email = "huudung";
-$firstname = "huudung";
-$lastname = "huudung";
 
 $stmt->execute();
+$result = $stmt->get_result();
 
-$stmt->close();
+while($row = $result->fetch_assoc()){
+    echo $row['username'];
+    echo $row['password'];
+    echo $row['email'];
+    echo $row['phone'];
+    echo $row['address'];
+    echo $row['gender'];
+    echo $row['birthday'];
+    echo $row['role'];
+    echo $row['status'];
+    echo $row['created_at'];
+    echo $row['updated_at'];
+    echo $row['deleted_at'];
+    echo "<br>";
+}
 
 // Close the connection
 $conn->close();
