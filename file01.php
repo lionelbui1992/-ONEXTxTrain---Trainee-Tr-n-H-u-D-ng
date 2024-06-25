@@ -1,1 +1,3 @@
-day la file ban da doc
+<?php
+    echo "cam on da ung tuyen";
+?>

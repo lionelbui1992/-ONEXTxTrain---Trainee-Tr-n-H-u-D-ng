@@ -3,29 +3,28 @@
 <body>
 
 <?php
-
-$int = 122;
-
-
-$min = 1;
-
-$max = 200;
-
-if (filter_var($int, FILTER_VALIDATE_INT, array("options" => array("min_range"=>$min, "max_range"=>$max))) === false) {
-  echo("Variable value is not within the legal range");
-} else {
-  echo("Variable value is within the legal range");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $data = $_POST["name"] . " " . $_POST["email"] . " " . $_POST["phonenumber"] . " " . $_POST["possition"] . " " . $_FILES["fileUpload"]["tmp_name"] . "\n";
+    $file = fopen("ViTriUngTuyen_HoTen.txt", "a");
+    fwrite($file, $data);
+    fclose($file);
+    header("Location: file01.php");
+    exit();
 }
-
-$ipv6 = "2001:0000:130F:0000:0000:09C0:876A:130B";
-
-if(filter_var($ipv6, FILTER_VALIDATE_IP, FILTER_FLAG_IPV6)){
-    echo "this is ipv6";
-}else{
-    echo "this is not ipv6";
-}
-
 ?>
+
+<form action="index.php" method="post" enctype="multipart/form-data">
+    name: <input type="text" name="name"><br>
+    email: <input type="text" name="email"><br>
+    phonenumber: <input type="text" name="phonenumber"><br>
+    position: <select name="possition">
+        <option value="intern">intern</option>
+        <option value="dev">dev</option>
+        <option value="tester">tester</option>
+    </select><br>
+    your cv: <input type="file" name="fileUpload"><br>
+    <button type="submit">Send</button>
+</form>
 
 </body>
 </html>
