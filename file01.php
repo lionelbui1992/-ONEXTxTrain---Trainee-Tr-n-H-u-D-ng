@@ -1,22 +1,22 @@
 <?php
-
-interface Animal {
-    public function makeSound();
-    public function run();
-}
-
-class Dog implements Animal {
-    public function makeSound() {
-        echo "Bark bark!<br>";
-    }
-
+// Định nghĩa một trait
+trait CanRun {
     public function run() {
-        echo "Dog is running.<br>";
+        echo "Đang chạy.<br>";
     }
 }
 
+// Sử dụng trait trong một lớp
+class Animal {
+    use CanRun;
 
-$dog = new Dog();
-$dog->makeSound(); 
-$dog->run(); 
+    public function makeSound() {
+        echo "Âm thanh của động vật.<br>";
+    }
+}
+
+// Tạo một đối tượng từ lớp Animal
+$animal = new Animal();
+$animal->makeSound(); // Output: Âm thanh của động vật.
+$animal->run(); // Output: Đang chạy.
 ?>
