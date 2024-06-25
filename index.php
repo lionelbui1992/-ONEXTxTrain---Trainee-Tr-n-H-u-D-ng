@@ -1,7 +1,7 @@
 <html>
 <head>
 <script>
-    
+
 function showHint(str) {
   if (str.length == 0) { 
     document.getElementById("txtHint").innerHTML = "";
