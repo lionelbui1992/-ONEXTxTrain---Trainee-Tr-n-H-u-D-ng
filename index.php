@@ -1,32 +1,29 @@
-<html>
+<!DOCTYPE html>
+<html lang="vi">
 <head>
-<script>
+    <meta charset="UTF-8">
+    <title>Ví dụ AJAX Poll đơn giản</title>
+    <script>
+        // Hàm thực hiện AJAX poll
+        function pollData() {
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("randomNumber").innerHTML = this.responseText;
+                }
+            };
+            xhttp.open("GET", "getRandomNumber.php", true); // Gửi yêu cầu GET đến tập tin getRandomNumber.php
+            xhttp.send();
+        }
 
-function showHint(str) {
-  if (str.length == 0) { 
-    document.getElementById("txtHint").innerHTML = "";
-    return;
-  } else {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-      if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("txtHint").innerHTML = this.responseText;
-      }
-    }
-    xmlhttp.open("GET", "gethint.php?q="+str, true);
-    xmlhttp.send();
-  }
-}
-</script>
+        // Hàm poll dữ liệu mỗi 3 giây
+        setInterval(function() {
+            pollData();
+        }, 3000); // Thời gian poll, ví dụ 3 giây
+    </script>
 </head>
 <body>
-
-<p><b>Start typing a name in the input field below:</b></p>
-<form action="">
-  <label for="fname">First name:</label>
-  <input type="text" id="fname" name="fname" onkeyup="showHint(this.value)">
-</form> 
-<p>Suggestions: <span id="txtHint"></span></p>
-
+    <h2>Số ngẫu nhiên:</h2>
+    <div id="randomNumber">Đang tải...</div>
 </body>
 </html>
