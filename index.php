@@ -14,9 +14,8 @@ if ($conn->connect_error) {
 
 // SQL query to create a new database named 'huudung'
 
-$stmt = $conn->prepare("SELECT * FROM account where id = ?");
-$stmt->bind_param("s", $id);
-$id = 4;
+$stmt = $conn->prepare("SELECT * FROM account ORDER BY ID DESC");
+
 
 
 $stmt->execute();
