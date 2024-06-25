@@ -14,28 +14,11 @@ if ($conn->connect_error) {
 
 // SQL query to create a new database named 'huudung'
 
-$stmt = $conn->prepare("SELECT * FROM account ORDER BY ID DESC");
-
-
-
+$stmt = $conn->prepare("DELETE FROM account WHERE id = ?");
+$stmt->bind_param("s", $id);
+$id=1;
 $stmt->execute();
-$result = $stmt->get_result();
-
-while($row = $result->fetch_assoc()){
-    echo $row['username'];
-    echo $row['password'];
-    echo $row['email'];
-    echo $row['phone'];
-    echo $row['address'];
-    echo $row['gender'];
-    echo $row['birthday'];
-    echo $row['role'];
-    echo $row['status'];
-    echo $row['created_at'];
-    echo $row['updated_at'];
-    echo $row['deleted_at'];
-    echo "<br>";
-}
+echo "delete account: " . $id;
 
 // Close the connection
 $conn->close();
