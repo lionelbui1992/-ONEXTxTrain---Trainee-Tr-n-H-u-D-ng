@@ -2,6 +2,8 @@
 
 class Animal {
     const NAME = 'animal';
+
+    public static $age = 324324;
     public static function makeSound() {
         echo "Âm thanh của động vật.<br>";
     }
@@ -9,5 +11,7 @@ class Animal {
 echo Animal::NAME;
 
 echo Animal::makeSound();
+
+echo Animal::$age;
 
 ?>
