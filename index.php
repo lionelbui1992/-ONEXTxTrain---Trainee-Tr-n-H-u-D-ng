@@ -3,17 +3,10 @@
 <body>
 
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $data = $_POST["name"] . " " . $_POST["email"] . " " . $_POST["phonenumber"] . " " . $_POST["possition"] . " " . $_FILES["fileUpload"]["tmp_name"] . "\n";
-    $file = fopen("ViTriUngTuyen_HoTen.txt", "a");
-    fwrite($file, $data);
-    fclose($file);
-    header("Location: file01.php");
-    exit();
-}
+
 ?>
 
-<form action="index.php" method="post" enctype="multipart/form-data">
+<form action="file01.php" method="post" enctype="multipart/form-data">
     name: <input type="text" name="name"><br>
     email: <input type="text" name="email"><br>
     phonenumber: <input type="text" name="phonenumber"><br>
