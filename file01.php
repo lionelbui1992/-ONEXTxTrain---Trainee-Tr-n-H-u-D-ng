@@ -1,7 +1,8 @@
 <?php
 class Dog{
     private $name;
-    private $age;
+    public $age;
+    protected $weight;
 
 
     public function __construct($name,$age){
