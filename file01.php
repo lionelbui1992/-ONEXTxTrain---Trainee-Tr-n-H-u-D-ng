@@ -1,9 +1,25 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $data = $_POST["name"] . " " . $_POST["email"] . " " . $_POST["phonenumber"] . " " . $_POST["possition"] . " " . $_FILES["fileUpload"]["tmp_name"] . "\n";
-    $file = fopen(strtoupper($_POST["possition"]) .'_'. strtoupper($_POST["name"]). '.txt', "a");
-    fwrite($file, $data);
-    fclose($file);
+function calculate($a, $b, $callback) {
+    return $callback($a, $b);
+}
+
+function add($a, $b) {
+    return $a + $b;
+}
+
+function subtract($a, $b) {
+    return $a - $b;
+}
+
+function multiply($a, $b) {
+    return $a * $b;
+}
+
+function divide($a, $b) {
+    if ($b != 0) {
+        return $a / $b;
+    } else {
+        return "Không thể chia cho 0";
     }
-    echo "cam on da ung tuyen";
+}
 ?>
