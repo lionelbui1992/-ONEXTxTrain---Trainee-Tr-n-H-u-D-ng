@@ -13,7 +13,15 @@ if ($conn->connect_error) {
 }
 
 // SQL query to create a new database named 'huudung'
-$sql = "CREATE DATABASE huudung";
+$sql = "CREATE TABLE account (
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    firstname VARCHAR(255) NOT NULL,
+    lastname VARCHAR(255) NOT NULL
+
+)";
 
 // Execute the query and check for success
 if ($conn->query($sql) === TRUE) {
