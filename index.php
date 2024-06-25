@@ -19,7 +19,8 @@ INSERT INTO `account` (`id`, `username`, `password`, `email`, `firstname`, `last
 
 // Execute the query and check for success
 if ($conn->query($sql) === TRUE) {
-    echo "Database insert successfully";
+    echo "Database insert successfully. the id is: " . $conn->insert_id;
+
 } else {
     echo "Error insert database: " . $conn->error;
 }
