@@ -4,12 +4,13 @@ class Dog{
     public $age;
     protected $weight;
 
-
-    public function __construct($name,$age){
+    public function __construct($name, $age, $weight)
+    {
         $this->name = $name;
         $this->age = $age;
-    }
-
+        $this->weight = $weight;
+        
+    } 
 
     public function getAge(){
         return $this->age;
@@ -25,10 +26,16 @@ class Dog{
         $this->name = $name;
     }
 
-    public function __destruct()
-    {
-        echo "object is unset";
-    }
+
 }
+
+class BabyDog extends Dog{
+
+}
+
+$pupy = new BabyDog("heh", 88, 32);
+$pupy->setName("dic");
+
+echo $pupy->getName();
 
 ?>
