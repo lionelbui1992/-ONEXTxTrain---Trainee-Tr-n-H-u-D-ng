@@ -1,14 +1,22 @@
 <?php
-abstract class HuuDung {
-    abstract public function getTen();
+
+interface Animal {
+    public function makeSound();
+    public function run();
 }
 
-class BabyHuuDung extends HuuDung{
-    public function getTen(){
-        return "Baby Huu Dung";
-    }  
-}
-$hd = new BabyHuuDung();
+class Dog implements Animal {
+    public function makeSound() {
+        echo "Bark bark!<br>";
+    }
 
-echo $hd->getTen();
+    public function run() {
+        echo "Dog is running.<br>";
+    }
+}
+
+
+$dog = new Dog();
+$dog->makeSound(); 
+$dog->run(); 
 ?>
