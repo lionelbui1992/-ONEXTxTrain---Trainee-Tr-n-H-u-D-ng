@@ -1,25 +1,5 @@
 <?php
-function calculate($a, $b, $callback) {
-    return $callback($a, $b);
-}
+$name = array("dung"=> 20, "nam"=> 22);
 
-function add($a, $b) {
-    return $a + $b;
-}
-
-function subtract($a, $b) {
-    return $a - $b;
-}
-
-function multiply($a, $b) {
-    return $a * $b;
-}
-
-function divide($a, $b) {
-    if ($b != 0) {
-        return $a / $b;
-    } else {
-        return "Không thể chia cho 0";
-    }
-}
+echo json_encode($name);
 ?>
