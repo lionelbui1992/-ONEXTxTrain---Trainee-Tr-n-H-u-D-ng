@@ -14,11 +14,23 @@ if ($conn->connect_error) {
 
 // SQL query to create a new database named 'huudung'
 $sql = "
-INSERT INTO `account` (`id`, `username`, `password`, `email`, `firstname`, `lastname`) VALUES (NULL, 'huudung', '232', 'huudung@gmai.com', 'hihii', 'hahah');
+INSERT INTO `account` (`id`, `username`, `password`, `email`, `firstname`, `lastname`) VALUES (NULL, 'a', '232', 'huudung@gmai.com', 'hihii', 'hahah');
+";
+
+$sql .= "
+INSERT INTO `account` (`id`, `username`, `password`, `email`, `firstname`, `lastname`) VALUES (NULL, 'b', '232', 'huudung@gmai.com', 'hihii', 'hahah');
+";
+
+$sql .= "
+INSERT INTO `account` (`id`, `username`, `password`, `email`, `firstname`, `lastname`) VALUES (NULL, 'c', '232', 'huudung@gmai.com', 'hihii', 'hahah');
+";
+
+$sql .= "
+INSERT INTO `account` (`id`, `username`, `password`, `email`, `firstname`, `lastname`) VALUES (NULL, 'd', '232', 'huudung@gmai.com', 'hihii', 'hahah');
 ";
 
 // Execute the query and check for success
-if ($conn->query($sql) === TRUE) {
+if ($conn->multi_query($sql) === TRUE) {
     echo "Database insert successfully. the id is: " . $conn->insert_id;
 
 } else {
@@ -28,3 +40,4 @@ if ($conn->query($sql) === TRUE) {
 // Close the connection
 $conn->close();
 ?>
+
