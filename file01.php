@@ -23,6 +23,11 @@ class Dog{
     public function setName($name){
         $this->name = $name;
     }
+
+    public function __destruct()
+    {
+        echo "object is unset";
+    }
 }
 
 ?>
