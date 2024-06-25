@@ -1,10 +1,14 @@
 <?php
-class HuuDung {
-    const name = "Tran Huu Dung";
+abstract class HuuDung {
+    abstract public function getTen();
 }
 
-$person = new HuuDung();
+class BabyHuuDung extends HuuDung{
+    public function getTen(){
+        return "Baby Huu Dung";
+    }  
+}
+$hd = new BabyHuuDung();
 
-echo $person::name;
-
+echo $hd->getTen();
 ?>
