@@ -1,11 +1,15 @@
 <?php
-$age = 17;
+class Dog{
+    private $name;
+    private $age;
 
+    public function getName(){
+        return $this->name;
+    }
 
-if($age < 18){
-    throw new Exception("oh no you are not 18");
-}else{
-    echo "you are 18 and above";
+    public function setName($name){
+        $this->name = $name;
+    }
 }
 
 ?>
