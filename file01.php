@@ -1,5 +1,11 @@
 <?php
-$name = array("dung"=> 20, "nam"=> 22);
+$age = 17;
 
-echo json_encode($name);
+
+if($age < 18){
+    throw new Exception("oh no you are not 18");
+}else{
+    echo "you are 18 and above";
+}
+
 ?>
